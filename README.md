@@ -6,7 +6,7 @@
 
 > [!IMPORTANT]
 >
-> - This library is under development!
+> - This library is under development and not fully ready for production use!
 
 A **React Native Craby Module** that provides **high-performance Base64 encoding and decoding** using a **Rust backend**.
 
@@ -98,7 +98,7 @@ console.log("Decoded bytes:", bytes);
 interface Base64Module {
   encodeString(input: string): string;
   decodeToString(b64: string): string;
-  decodeToBytes(b64: string): string; 
+  decodeToBytes(b64: string): string;
 }
 ```
 
@@ -117,6 +117,7 @@ function base64ToUint8Array(b64: string) {
   return arr;
 }
 ```
+
 ---
 
 ## 📱 Supported Platforms
