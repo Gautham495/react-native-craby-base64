@@ -6,34 +6,11 @@
  */
 
 import React, { useEffect, useState } from 'react';
-import {
-  Text,
-  StatusBar,
-  StyleSheet,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import { Text, View } from 'react-native';
 
 import Base64 from 'react-native-craby-base64';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
-  );
-}
-
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
   const [encoded, setEncoded] = useState<string>('');
   const [decodedString, setDecodedString] = useState<string>('');
 
@@ -50,23 +27,11 @@ function AppContent() {
   }, []);
 
   return (
-    <View style={[styles.container, { paddingTop: safeAreaInsets.top }]}>
-      <Text style={styles.text}>Encoded: {encoded}</Text>
-      <Text style={styles.text}>Decoded String: {decodedString}</Text>
+    <View>
+      <Text>Encoded: {encoded}</Text>
+      <Text>Decoded String: {decodedString}</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 24,
-    gap: 8,
-  },
-  text: {
-    fontSize: 16,
-    color: '#000',
-  },
-});
 
 export default App;

@@ -1,7 +1,7 @@
 {
   "name": "react-native-craby-base64",
-  "version": "0.1.0",
-  "description": "Base 64 and Array Buffer libraries in Rust",
+  "version": "1.0.0",
+  "description": "Base 64 Decode & Encode in Rust",
   "workspaces": [
     "example"
   ],
@@ -75,5 +75,6 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
-  }
+  },
+  "packageManager": "yarn@4.10.3"
 }

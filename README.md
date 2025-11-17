@@ -4,6 +4,10 @@
   </picture>
 </a>
 
+> [!IMPORTANT]
+>
+> - This library is under development!
+
 A **React Native Craby Module** that provides **high-performance Base64 encoding and decoding** using a **Rust backend**.
 
 Built with **Craby** (TurboModule generator for Rust) and optimized for mobile performance on both **iOS** and **Android**.
@@ -12,7 +16,7 @@ Built with **Craby** (TurboModule generator for Rust) and optimized for mobile p
 
 ## 🚀 Why This Library Exists
 
-Most Base64 libraries in React Native:
+Most Base64 libraries in React Native and in the JS world:
 
 - run in JS (slow)
 - allocate unnecessary buffers
@@ -44,9 +48,6 @@ Most Base64 libraries in React Native:
 - **Zero-copy Rust implementation**
   Using the optimized `base64` crate.
 
-- **TurboModule + Craby + Rust**
-  No async bridge. No JS overhead. Pure native.
-
 ---
 
 ## 📦 Installation
@@ -61,17 +62,11 @@ or
 yarn add react-native-craby-base64
 ```
 
-Then update native files:
-
 ### iOS
 
 ```
 cd ios && pod install
 ```
-
-### Android
-
-No extra steps — Gradle automatically compiles the Rust module.
 
 ---
 
@@ -103,7 +98,7 @@ console.log("Decoded bytes:", bytes);
 interface Base64Module {
   encodeString(input: string): string;
   decodeToString(b64: string): string;
-  decodeToBytes(b64: string): string; // base64-encoded byte buffer
+  decodeToBytes(b64: string): string; 
 }
 ```
 
@@ -122,27 +117,6 @@ function base64ToUint8Array(b64: string) {
   return arr;
 }
 ```
-
----
-
-## 🛠️ Under the Hood
-
-This library uses:
-
-- **Rust** for extremely fast Base64 operations
-- **Craby** to generate TurboModule bindings
-- **CXX (downgraded)** to ensure compatibility with Android NDK (C++17 only)
-- **JSI** for direct memory access with zero bridge overhead
-
-Rust implementation uses:
-
-```rust
-general_purpose::STANDARD.encode(...)
-general_purpose::STANDARD.decode(...)
-```
-
-Clean, robust, battle-tested.
-
 ---
 
 ## 📱 Supported Platforms
@@ -151,7 +125,6 @@ Clean, robust, battle-tested.
 | ---------------------------- | ---------------- |
 | **iOS**                      | ✅ Supported     |
 | **Android**                  | ✅ Supported     |
-| **App Clips**                | ✅ Works         |
 | **Expo (Custom Dev Client)** | ⚠️ Needs plugin  |
 | **Web**                      | 🚫 Not supported |
 
@@ -164,18 +137,6 @@ This library was built with:
 - Rust
 - Craby
 - CXX
-- React Native TurboModules
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome — especially improvements for:
-
-- full binary API support
-- ArrayBuffer bridging
-- SIMD accelerated Base64
-- RN New Architecture enhancements
 
 ---
 
