@@ -1,0 +1,6 @@
+[project]
+name = "react_native_craby_base_64"
+source_dir = "src"
+
+[android]
+package_name = "rs.craby.reactnativecrabybase64"
