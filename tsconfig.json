@@ -9,7 +9,8 @@
     "isolatedModules": true,
     "strict": true,
     "allowJs": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsx": "react-native"
   },
   "exclude": ["**/dist/*"]
 }

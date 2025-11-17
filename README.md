@@ -1,6 +1,6 @@
 <a href="https://gauthamvijay.com">
   <picture>
-    <img alt="react-native-craby-base64" src="./docs/img/banner.png" />
+    <img alt="react-native-craby-base64" src="https://github.com/Gautham495/react-native-craby-base64/raw/main/docs/img/banner.png" />
   </picture>
 </a>
 

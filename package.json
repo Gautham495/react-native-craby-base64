@@ -1,7 +1,7 @@
 {
   "name": "react-native-craby-base64",
-  "version": "1.0.0",
-  "description": "Base 64 Decode & Encode in Rust",
+  "version": "1.0.1",
+  "description": "Base64 Decode & Encode in React Native with Rust Powered Craby Modules",
   "workspaces": [
     "example"
   ],
