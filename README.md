@@ -4,8 +4,6 @@
   </picture>
 </a>
 
-# 📦 `react-native-craby-base64`
-
 A **React Native Craby Module** that provides **high-performance Base64 encoding and decoding** using a **Rust backend**.
 
 Built with **Craby** (TurboModule generator for Rust) and optimized for mobile performance on both **iOS** and **Android**.
