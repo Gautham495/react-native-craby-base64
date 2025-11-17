@@ -18,11 +18,11 @@ Built with **Craby** (TurboModule generator for Rust) and optimized for mobile p
 
 Most Base64 libraries in React Native and in the JS world:
 
-- run in JS (slow)
-- allocate unnecessary buffers
-- cannot handle large binary payloads efficiently
-- do not use JSI/TurboModules
-- do not support Rust (fastest safe implementation)
+- Run in JS (slow)
+- Allocate unnecessary buffers
+- Cannot handle large binary payloads efficiently
+- Do not use JSI/TurboModules
+- Do not support Rust (fastest safe implementation)
 
 `react-native-craby-base64` solves all of this:
 
@@ -126,8 +126,6 @@ function base64ToUint8Array(b64: string) {
 | ---------------------------- | ---------------- |
 | **iOS**                      | ✅ Supported     |
 | **Android**                  | ✅ Supported     |
-| **Expo (Custom Dev Client)** | ⚠️ Needs plugin  |
-| **Web**                      | 🚫 Not supported |
 
 ---
 
@@ -137,7 +135,6 @@ This library was built with:
 
 - Rust
 - Craby
-- CXX
 
 ---
 

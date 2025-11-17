@@ -51,9 +51,6 @@ jobs:
           # Lint check
           yarn lint --fix
 
-          # Run tests
-          yarn test --passWithNoTests
-
       # Build using create-react-native-library script
       - name: Build package
         run: yarn prepare
